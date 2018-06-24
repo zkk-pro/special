@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #box {
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: row; /*默认的，不写也可以*/
+    }
+    .item-wapper {
+      display: flex;
+      flex-direction: column;
+      width: calc(100%/4); /*需要几列排版就除以几*/
+      padding-right: 10px;
+    }
+    .item-wapper:first-child {
+      padding-left: 10px;
+    }
+    #box .box-item {
+      display: inline-block;
+      padding-top: 10px;
+    }
+    #box .img-box {
+      padding: 5px;
+      border: 1px solid #999;
+      border-radius: 5px;
+    }
+    #box .img-box img {
+      width: 100%;
+      vertical-align: top;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+    <div class="item-wapper">
+      <div class="box-item">
+        <div class="img-box">
+          <img src="./images/1.jpeg" alt="">
+        </div>
+      </div>
+      <div class="box-item">
+        <div class="img-box">
+          <img src="./images/2.jpeg" alt="">
+        </div>
+      </div>
+      <div class="box-item">
+        <div class="img-box">
+          <img src="./images/3.jpeg" alt="">
+        </div>
+      </div>
+      <div class="box-item">
+        <div class="img-box">
+          <img src="./images/4.jpeg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="item-wapper">
+      <div class="box-item">
+        <div class="img-box">
+          <img src="./images/5.jpeg" alt="">
+        </div>
+      </div>
+      <div class="box-item">
+        <div class="img-box">
+          <img src="./images/6.jpeg" alt="">
+        </div>
+      </div>
+      <div class="box-item">
+        <div class="img-box">
+          <img src="./images/7.jpeg" alt="">
+        </div>
+      </div>
+      <div class="box-item">
+        <div class="img-box">
+          <img src="./images/8.jpeg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="item-wapper">
+        <div class="box-item">
+          <div class="img-box">
+            <img src="./images/9.jpeg" alt="">
+          </div>
+        </div>
+        <div class="box-item">
+          <div class="img-box">
+            <img src="./images/10.jpeg" alt="">
+          </div>
+        </div>
+        <div class="box-item">
+          <div class="img-box">
+            <img src="./images/11.jpeg" alt="">
+          </div>
+        </div>
+        <div class="box-item">
+          <div class="img-box">
+            <img src="./images/12.jpeg" alt="">
+          </div>
+        </div>
+    </div>
+    <div class="item-wapper">
+        <div class="box-item">
+          <div class="img-box">
+            <img src="./images/13.jpeg" alt="">
+          </div>
+        </div>
+        <div class="box-item">
+          <div class="img-box">
+            <img src="./images/14.jpeg" alt="">
+          </div>
+        </div>
+        <div class="box-item">
+          <div class="img-box">
+            <img src="./images/15.jpeg" alt="">
+          </div>
+        </div>
+        <div class="box-item">
+          <div class="img-box">
+            <img src="./images/16.jpeg" alt="">
+          </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
