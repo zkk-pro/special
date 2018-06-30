@@ -147,11 +147,6 @@
   </div>
 </body>
 <script>
-<<<<<<< HEAD
-  window.onload = function () {
-    // 一个简易的类似jQuery的$函数
-    function $(id) {
-=======
 window.onload = function () {
   // 执行瀑布流布局
   waterFall();
@@ -195,7 +190,6 @@ window.onload = function () {
 }
   // 一个简易的类似jQuery的$函数
   function $(id) {
->>>>>>> 新增无限加载
       if (id.includes('#')) {
         return document.getElementById(id.replace(/\#/, ''));
       } else if (id.includes('.')) {
@@ -204,48 +198,6 @@ window.onload = function () {
         console.error(id + ' is undefined');
       }
     }
-<<<<<<< HEAD
-
-    /****************整体瀑布流居中***************/
-    let box = $('#box'); // 整个瀑布流盒子
-    let boxItem = box.getElementsByClassName('box-item'); // 所有瀑布
-
-    // 整个瀑布流盒子的宽度 ÷ 一个瀑布的宽度 = 每一行的个数（取整）
-    let rowNum = parseInt(box.offsetWidth / boxItem[0].offsetWidth); // 获得每一行的个数
-    // 一行的个数 * 一个瀑布的宽度 = 获取瀑布一行的宽度； 并设置整个瀑布流的宽度
-    box.style.width = rowNum * boxItem[0].offsetWidth + 'px';
-    // 再设置居中（css 定宽垂直居中使用：margin: 0 auto）
-    box.style.margin = '0 auto'; 
-
-    /***************计算一行中最矮的瀑布盒子****************/
-    // 所有瀑布的高度，
-    let allBoxItemHeight = [], minBoxHeight = 0, minBoxIndex = 0;
-    for (let i = 0; i < boxItem.length; i++) {
-      // 第一行所有瀑布的高度
-      if (i < rowNum) {
-        allBoxItemHeight.push(boxItem[i].offsetHeight);
-      } else {
-        // 一行中最矮盒子的高度
-        minBoxHeight = Math.min.apply(this, allBoxItemHeight);
-        // 最矮盒子的索引
-        minBoxIndex = allBoxItemHeight.indexOf(minBoxHeight);
-        // 让下一行的盒子定位到最矮盒子下边
-        /*
-          原理：
-            position定位：
-            top = 最矮盒子的高度
-            left = 最矮盒子的位置(索引) * 最矮盒子的宽度
-        */
-        boxItem[i].style.position = 'absolute';
-        boxItem[i].style.left = minBoxIndex * boxItem[minBoxIndex].offsetWidth + 'px';
-        boxItem[i].style.top = minBoxHeight + 'px';
-        // 重要：要更新数组中最矮盒子的高度，不然全部都会定位到最矮盒子的位置
-        allBoxItemHeight[minBoxIndex] += boxItem[i].offsetHeight;
-        
-      }
-    }
-  }
-=======
   
   // 瀑布流布局
   function waterFall () {
@@ -314,7 +266,6 @@ window.onload = function () {
       return lastBoxTop <= screenH + scrollTop;
 
     }
->>>>>>> 新增无限加载
 
 </script>
 </html>
